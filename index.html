@@ -3,479 +3,192 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Winpowr — V2A Grey & Slate</title>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>WINPOWR — V2A</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  /* Greys & off-whites */
   --white:#FFFFFF;
-  --off-white:#F7F7F5;
+  --bg:#e6ecea;
+  --bg-light:#f0f4f3;
   --grey-50:#F0F0EE;
   --grey-100:#E4E4E1;
   --grey-200:#CCCCC8;
   --grey-400:#9A9A95;
   --grey-600:#5E5E5A;
   --grey-800:#2E2E2C;
-  --ink:#1A1A18;
-
-  /* Slate blue accent — moderate */
-  --slate:#3D5A80;
-  --slate-mid:#4E6F98;
-  --slate-light:#6B8BB0;
-  --slate-pale:#EBF0F7;
-  --slate-xpale:#F4F7FB;
-
-  /* Borders */
-  --border:#E2E2DE;
-  --border-mid:#CACAC6;
+  --ink:#1a1a1a;
+  --green:#1f705c;
+  --green-mid:#28876f;
+  --green-light:#6fbf4a;
+  --green-pale:#e8f4f1;
+  --green-xpale:#f2faf8;
+  --blue:#245780;
+  --blue-mid:#2d6a98;
+  --blue-pale:#e8f0f7;
+  --yellow:#f2e925;
+  --border:#d4dedd;
+  --border-mid:#bcc8c6;
 }
 html{scroll-behavior:smooth}
-body{background:var(--off-white);color:var(--ink);font-family:'Outfit',sans-serif;font-weight:300;line-height:1.65;overflow-x:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;font-weight:300;line-height:1.65;overflow-x:hidden}
 
 /* ── ANNOUNCE ── */
-.announce{background:var(--slate);color:#fff;text-align:center;padding:10px;font-size:11px;letter-spacing:0.14em;font-weight:400}
+.announce{background:var(--green);color:#fff;text-align:center;padding:10px;font-size:11px;letter-spacing:0.14em;font-weight:400;font-family:'Montserrat',sans-serif}
 
 /* ── NAV ── */
 nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 68px;display:flex;align-items:center;justify-content:space-between;height:74px;position:sticky;top:0;z-index:100}
-.logo{font-family:'Libre Baskerville',serif;font-size:22px;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:0.02em}
+.logo{font-family:'Poppins',sans-serif;font-size:20px;font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:0.04em;text-transform:uppercase}
+.logo span{color:var(--green)}
 .nav-links{display:flex;gap:36px;list-style:none}
-.nav-links a{color:var(--grey-400);text-decoration:none;font-size:13px;font-weight:400;letter-spacing:0.02em;transition:color 0.2s}
+.nav-links a{color:var(--grey-400);text-decoration:none;font-size:13px;font-weight:400;letter-spacing:0.02em;transition:color 0.2s;font-family:'Montserrat',sans-serif}
 .nav-links a:hover{color:var(--ink)}
 .nav-right{display:flex;align-items:center;gap:22px}
-.nav-cart{font-size:13px;color:var(--grey-400);text-decoration:none;transition:color 0.2s}
+.nav-cart{font-size:13px;color:var(--grey-400);text-decoration:none;transition:color 0.2s;font-family:'Montserrat',sans-serif}
 .nav-cart:hover{color:var(--ink)}
-.nav-cta{background:var(--slate);color:#fff;padding:10px 26px;font-size:12px;font-weight:500;letter-spacing:0.08em;text-decoration:none;border-radius:3px;transition:background 0.2s}
-.nav-cta:hover{background:var(--slate-mid)}
+.nav-cta{background:var(--green);color:#fff;padding:10px 26px;font-size:12px;font-weight:600;letter-spacing:0.08em;text-decoration:none;border-radius:3px;transition:background 0.2s;font-family:'Montserrat',sans-serif}
+.nav-cta:hover{background:var(--green-mid)}
 
-/* ── HERO: full-width cinematic ── */
-.hero{
-  background:var(--white);
-  min-height:91vh;
-  display:flex;flex-direction:column;justify-content:center;
-  padding:110px 68px 72px;
-  position:relative;overflow:hidden;
-  border-bottom:1px solid var(--border)
-}
-/* subtle bg watermark */
-.hero-watermark{
-  position:absolute;bottom:-60px;right:-30px;
-  font-family:'Libre Baskerville',serif;
-  font-size:320px;font-weight:700;
-  color:rgba(61,90,128,0.03);
-  letter-spacing:-0.05em;line-height:1;
-  user-select:none;pointer-events:none
-}
+/* ── HERO ── */
+.hero{background:var(--white);min-height:91vh;display:flex;flex-direction:column;justify-content:center;padding:110px 68px 72px;position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
+.hero-watermark{position:absolute;bottom:-60px;right:-30px;font-family:'Poppins',sans-serif;font-size:320px;font-weight:700;color:rgba(31,112,92,0.03);letter-spacing:-0.05em;line-height:1;user-select:none;pointer-events:none}
 .hero-inner{max-width:820px;position:relative;z-index:2}
-
-/* pill tag */
-.hero-pill{
-  display:inline-flex;align-items:center;gap:10px;
-  background:var(--slate-xpale);border:1px solid rgba(61,90,128,0.18);
-  color:var(--slate);font-size:11px;font-weight:500;
-  letter-spacing:0.12em;text-transform:uppercase;
-  padding:7px 16px;margin-bottom:40px;border-radius:3px
-}
-.hero-pill-dot{width:6px;height:6px;background:var(--slate);border-radius:50%}
-
-/* headline */
-.hero h1{
-  font-family:'Libre Baskerville',serif;
-  font-size:clamp(50px,6.2vw,86px);
-  font-weight:400;line-height:1.02;
-  color:var(--ink);margin-bottom:26px;
-  letter-spacing:-0.02em
-}
-.hero h1 em{font-style:italic;color:var(--slate)}
-
-/* subtext */
-.hero-desc{
-  font-size:17px;color:var(--grey-600);
-  line-height:1.8;max-width:580px;
-  margin-bottom:48px;font-weight:300
-}
-
-/* CTA row */
+.hero-pill{display:inline-flex;align-items:center;gap:10px;background:var(--green-xpale);border:1px solid rgba(31,112,92,0.18);color:var(--green);font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:7px 16px;margin-bottom:40px;border-radius:3px;font-family:'Montserrat',sans-serif}
+.hero-pill-dot{width:6px;height:6px;background:var(--green);border-radius:50%}
+.hero h1{font-family:'Poppins',sans-serif;font-size:clamp(46px,5.8vw,80px);font-weight:700;line-height:1.05;color:var(--ink);margin-bottom:26px;letter-spacing:-0.02em}
+.hero h1 em{font-style:italic;color:var(--green);font-weight:600}
+.hero-desc{font-size:17px;color:var(--grey-600);line-height:1.8;max-width:580px;margin-bottom:48px;font-weight:300}
 .hero-actions{display:flex;align-items:center;gap:20px;margin-bottom:72px}
-.btn-slate{
-  background:var(--slate);color:#fff;
-  padding:15px 44px;font-size:13px;font-weight:500;
-  letter-spacing:0.08em;text-decoration:none;
-  display:inline-block;border-radius:3px;transition:background 0.22s
-}
-.btn-slate:hover{background:var(--slate-mid)}
-.btn-ghost-grey{
-  color:var(--grey-600);font-size:14px;
-  text-decoration:none;display:flex;align-items:center;
-  gap:10px;transition:color 0.2s
-}
-.btn-ghost-grey:hover{color:var(--slate)}
-.btn-ghost-grey::after{content:'→';transition:transform 0.25s}
-.btn-ghost-grey:hover::after{transform:translateX(5px)}
-
-/* stats row */
-.hero-stats{
-  display:flex;gap:0;
-  border-top:1px solid var(--border);padding-top:40px
-}
+.btn-green{background:var(--green);color:#fff;padding:15px 44px;font-size:13px;font-weight:600;letter-spacing:0.08em;text-decoration:none;display:inline-block;border-radius:3px;transition:background 0.22s;font-family:'Montserrat',sans-serif}
+.btn-green:hover{background:var(--green-mid)}
+.btn-ghost{color:var(--grey-600);font-size:14px;text-decoration:none;display:flex;align-items:center;gap:10px;transition:color 0.2s;font-family:'Montserrat',sans-serif}
+.btn-ghost:hover{color:var(--green)}
+.btn-ghost::after{content:'→';transition:transform 0.25s}
+.btn-ghost:hover::after{transform:translateX(5px)}
+.hero-stats{display:flex;gap:0;border-top:1px solid var(--border);padding-top:40px}
 .hero-stat{padding-right:48px;margin-right:48px;border-right:1px solid var(--border)}
 .hero-stat:last-child{border-right:none;padding-right:0;margin-right:0}
-.hero-stat strong{
-  font-family:'Libre Baskerville',serif;
-  font-size:30px;font-weight:400;color:var(--slate);
-  display:block;letter-spacing:-0.01em
-}
-.hero-stat span{
-  font-size:11px;color:var(--grey-400);
-  letter-spacing:0.1em;text-transform:uppercase;
-  margin-top:5px;display:block
-}
+.hero-stat strong{font-family:'Poppins',sans-serif;font-size:28px;font-weight:700;color:var(--green);display:block;letter-spacing:-0.01em}
+.hero-stat span{font-size:11px;color:var(--grey-400);letter-spacing:0.1em;text-transform:uppercase;margin-top:5px;display:block;font-family:'Montserrat',sans-serif}
 
 /* ── TRUST BAND ── */
-.trust-band{
-  background:var(--grey-800);
-  display:grid;grid-template-columns:repeat(4,1fr)
-}
-.tb-item{
-  padding:20px 28px;border-right:1px solid rgba(255,255,255,0.05);
-  display:flex;align-items:center;gap:14px
-}
+.trust-band{background:var(--grey-800);display:grid;grid-template-columns:repeat(4,1fr)}
+.tb-item{padding:20px 28px;border-right:1px solid rgba(255,255,255,0.05);display:flex;align-items:center;gap:14px}
 .tb-item:last-child{border-right:none}
-.tb-icon{
-  width:34px;height:34px;background:rgba(61,90,128,0.3);
-  border-radius:50%;display:flex;align-items:center;
-  justify-content:center;font-size:14px;color:var(--slate-pale);
-  flex-shrink:0
-}
-.tb-text strong{display:block;font-size:13px;font-weight:500;color:#fff;letter-spacing:0.02em}
-.tb-text span{font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:0.05em}
+.tb-icon{width:34px;height:34px;background:rgba(31,112,92,0.35);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--green-pale);flex-shrink:0}
+.tb-text strong{display:block;font-size:13px;font-weight:600;color:#fff;letter-spacing:0.02em;font-family:'Montserrat',sans-serif}
+.tb-text span{font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:0.05em;font-family:'Montserrat',sans-serif}
 
 /* ── SHARED UTILS ── */
-.eyebrow{
-  font-size:10px;font-weight:600;
-  letter-spacing:0.22em;text-transform:uppercase;
-  color:var(--slate);margin-bottom:14px;display:block
-}
-.h2{
-  font-family:'Libre Baskerville',serif;
-  font-size:clamp(30px,3.4vw,48px);
-  font-weight:400;line-height:1.12;
-  color:var(--ink);margin-bottom:14px
-}
-.h2 em{font-style:italic;color:var(--slate)}
-.view-link{
-  font-size:12px;font-weight:500;color:var(--slate);
-  text-decoration:none;display:flex;align-items:center;
-  gap:6px;transition:gap 0.2s;letter-spacing:0.04em
-}
+.eyebrow{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--green);margin-bottom:14px;display:block;font-family:'Montserrat',sans-serif}
+.h2{font-family:'Poppins',sans-serif;font-size:clamp(28px,3.2vw,44px);font-weight:700;line-height:1.12;color:var(--ink);margin-bottom:14px}
+.h2 em{font-style:italic;color:var(--green);font-weight:600}
+.view-link{font-size:12px;font-weight:600;color:var(--green);text-decoration:none;display:flex;align-items:center;gap:6px;transition:gap 0.2s;letter-spacing:0.04em;font-family:'Montserrat',sans-serif}
 .view-link:hover{gap:12px}
 
-/* ── PHILOSOPHY: alternating row layout ── */
-.philosophy{padding:100px 68px;background:var(--off-white)}
+/* ── PHILOSOPHY ── */
+.philosophy{padding:100px 68px;background:var(--bg)}
 .phil-header{max-width:540px;margin-bottom:64px}
-.phil-header p{font-size:15px;color:var(--grey-600);line-height:1.8;margin-top:14px}
+.phil-header p{font-size:15px;color:var(--grey-600);line-height:1.8;margin-top:14px;font-family:'Montserrat',sans-serif}
 .phil-rows{display:flex;flex-direction:column}
-.phil-row{
-  display:grid;grid-template-columns:72px 1fr 1fr;
-  gap:0;border-top:1px solid var(--border);padding:48px 0;
-  align-items:start
-}
+.phil-row{display:grid;grid-template-columns:72px 1fr 1fr;gap:0;border-top:1px solid var(--border);padding:48px 0;align-items:start}
 .phil-row:last-child{border-bottom:1px solid var(--border)}
-.phil-num{
-  font-family:'Libre Baskerville',serif;
-  font-size:13px;color:var(--grey-200);
-  font-weight:400;padding-top:5px
-}
-.phil-title h3{
-  font-family:'Libre Baskerville',serif;
-  font-size:21px;font-weight:400;color:var(--ink);
-  line-height:1.3;padding-right:56px
-}
-.phil-body p{font-size:14px;color:var(--grey-600);line-height:1.85;margin-bottom:14px}
-.phil-tag{
-  display:inline-block;background:var(--slate-pale);
-  color:var(--slate);font-size:10px;font-weight:500;
-  letter-spacing:0.1em;text-transform:uppercase;
-  padding:4px 12px;border-radius:3px;
-  border:1px solid rgba(61,90,128,0.15)
-}
+.phil-num{font-family:'Poppins',sans-serif;font-size:13px;color:var(--grey-200);font-weight:600;padding-top:5px}
+.phil-title h3{font-family:'Poppins',sans-serif;font-size:20px;font-weight:700;color:var(--ink);line-height:1.3;padding-right:56px}
+.phil-body p{font-size:14px;color:var(--grey-600);line-height:1.85;margin-bottom:14px;font-family:'Montserrat',sans-serif}
+.phil-tag{display:inline-block;background:var(--green-pale);color:var(--green);font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:4px 12px;border-radius:3px;border:1px solid rgba(31,112,92,0.18);font-family:'Montserrat',sans-serif}
 
-/* ── PRODUCTS: asymmetric featured layout ── */
+/* ── PRODUCTS ── */
 .products{padding:100px 68px;background:var(--white)}
-.products-header{
-  display:flex;justify-content:space-between;
-  align-items:flex-end;margin-bottom:52px
-}
-.prod-layout{
-  display:grid;grid-template-columns:1fr 1fr;
-  grid-template-rows:auto auto;
-  gap:2px;background:var(--border)
-}
-/* featured = left, spans both rows */
-.prod-card{
-  background:var(--off-white);text-decoration:none;
-  display:block;overflow:hidden;transition:background 0.22s
-}
+.products-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:52px}
+.prod-layout{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:2px;background:var(--border)}
+.prod-card{background:var(--bg);text-decoration:none;display:block;overflow:hidden;transition:background 0.22s}
 .prod-card:hover{background:var(--white)}
 .prod-card.featured{grid-row:span 2;display:flex;flex-direction:column}
-
-/* product image placeholder areas */
-.prod-img-full{
-  flex:1;background:var(--grey-50);
-  display:flex;align-items:center;justify-content:center;
-  border-bottom:1px solid var(--border);
-  min-height:260px;position:relative;overflow:hidden
-}
-.prod-img-sm{
-  aspect-ratio:16/7;background:var(--grey-50);
-  display:flex;align-items:center;justify-content:center;
-  border-bottom:1px solid var(--border);
-  position:relative;overflow:hidden
-}
-/* big ghost letter as placeholder art */
-.prod-ghost{
-  font-family:'Libre Baskerville',serif;
-  font-size:120px;font-weight:700;
-  color:rgba(61,90,128,0.06);
-  position:absolute;line-height:1
-}
+.prod-img-full{flex:1;background:var(--grey-50);display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border);min-height:260px;position:relative;overflow:hidden}
+.prod-img-sm{aspect-ratio:16/7;background:var(--grey-50);display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.prod-ghost{font-family:'Poppins',sans-serif;font-size:120px;font-weight:700;color:rgba(31,112,92,0.06);position:absolute;line-height:1}
 .prod-ghost-sm{font-size:72px}
-
 .prod-body{padding:30px 32px}
-.prod-tag{
-  font-size:9px;font-weight:600;letter-spacing:0.2em;
-  text-transform:uppercase;color:var(--slate);margin-bottom:8px
-}
-.prod-name{
-  font-family:'Libre Baskerville',serif;
-  font-size:19px;font-weight:400;color:var(--ink);
-  margin-bottom:8px;line-height:1.3
-}
-.prod-card.featured .prod-name{font-size:24px}
-.prod-desc{font-size:13px;color:var(--grey-600);line-height:1.7;margin-bottom:20px}
-.prod-footer{
-  display:flex;justify-content:space-between;align-items:center;
-  border-top:1px solid var(--border);padding-top:16px
-}
-.prod-price{
-  font-family:'Libre Baskerville',serif;
-  font-size:20px;font-weight:400;color:var(--ink)
-}
-.prod-cta{
-  background:var(--slate);color:#fff;
-  font-size:10px;font-weight:600;letter-spacing:0.1em;
-  text-transform:uppercase;padding:9px 20px;
-  border:none;cursor:pointer;border-radius:3px;
-  transition:background 0.2s;text-decoration:none;display:inline-block
-}
-.prod-cta:hover{background:var(--slate-mid)}
+.prod-tag{font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--green);margin-bottom:8px;font-family:'Montserrat',sans-serif}
+.prod-name{font-family:'Poppins',sans-serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:8px;line-height:1.3}
+.prod-card.featured .prod-name{font-size:22px}
+.prod-desc{font-size:13px;color:var(--grey-600);line-height:1.7;margin-bottom:20px;font-family:'Montserrat',sans-serif}
+.prod-footer{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border);padding-top:16px}
+.prod-price{font-family:'Poppins',sans-serif;font-size:20px;font-weight:700;color:var(--ink)}
+.prod-cta{background:var(--green);color:#fff;font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:9px 20px;border:none;cursor:pointer;border-radius:3px;transition:background 0.2s;text-decoration:none;display:inline-block;font-family:'Montserrat',sans-serif}
+.prod-cta:hover{background:var(--green-mid)}
 
 /* ── EXPERT ── */
-.expert{
-  display:grid;grid-template-columns:5fr 7fr;
-  align-items:stretch;
-  border-top:1px solid var(--border);
-  border-bottom:1px solid var(--border)
-}
-.expert-img{
-  background:var(--grey-50);
-  display:flex;align-items:center;justify-content:center;
-  min-height:520px;position:relative;
-  border-right:1px solid var(--border);overflow:hidden
-}
-.expert-img-ghost{
-  font-family:'Libre Baskerville',serif;
-  font-size:220px;font-weight:700;
-  color:rgba(61,90,128,0.04);line-height:1;
-  position:absolute;user-select:none
-}
-.expert-cred-card{
-  position:absolute;bottom:32px;left:32px;right:32px;
-  background:var(--white);border:1px solid var(--border);
-  padding:20px 22px
-}
-.expert-cred-name{
-  font-family:'Libre Baskerville',serif;
-  font-size:15px;color:var(--ink)
-}
-.expert-cred-title{font-size:11px;color:var(--grey-400);margin-top:4px;line-height:1.5}
+.expert{display:grid;grid-template-columns:5fr 7fr;align-items:stretch;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.expert-img{background:var(--bg-light);display:flex;align-items:center;justify-content:center;min-height:520px;position:relative;border-right:1px solid var(--border);overflow:hidden}
+.expert-img-ghost{font-family:'Poppins',sans-serif;font-size:220px;font-weight:700;color:rgba(31,112,92,0.04);line-height:1;position:absolute;user-select:none}
+.expert-cred-card{position:absolute;bottom:32px;left:32px;right:32px;background:var(--white);border:1px solid var(--border);padding:20px 22px}
+.expert-cred-name{font-family:'Poppins',sans-serif;font-size:15px;color:var(--ink);font-weight:700}
+.expert-cred-title{font-size:11px;color:var(--grey-400);margin-top:4px;line-height:1.5;font-family:'Montserrat',sans-serif}
 .expert-cred-badges{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
-.cred-badge{
-  font-size:9px;background:var(--slate-pale);
-  color:var(--slate);padding:3px 9px;border-radius:3px;
-  font-weight:500;letter-spacing:0.06em
-}
-.expert-text{
-  padding:80px 68px;
-  display:flex;flex-direction:column;justify-content:center;
-  background:var(--white)
-}
-.open-quote{
-  font-family:'Libre Baskerville',serif;
-  font-size:72px;color:var(--slate);opacity:0.2;
-  line-height:0.6;display:block;margin-bottom:18px
-}
-blockquote.grey{
-  font-family:'Libre Baskerville',serif;
-  font-size:clamp(19px,2.1vw,26px);
-  font-style:italic;font-weight:400;
-  line-height:1.55;color:var(--ink);margin-bottom:26px
-}
-.expert-name{font-size:14px;font-weight:500;color:var(--ink);letter-spacing:0.04em}
-.expert-role{font-size:12px;color:var(--grey-400);margin-top:4px}
-.expert-link{
-  margin-top:26px;display:inline-flex;align-items:center;
-  gap:8px;font-size:13px;color:var(--slate);
-  text-decoration:none;font-weight:500;transition:gap 0.2s
-}
+.cred-badge{font-size:9px;background:var(--green-pale);color:var(--green);padding:3px 9px;border-radius:3px;font-weight:600;letter-spacing:0.06em;font-family:'Montserrat',sans-serif}
+.expert-text{padding:80px 68px;display:flex;flex-direction:column;justify-content:center;background:var(--white)}
+.open-quote{font-family:'Poppins',sans-serif;font-size:72px;font-weight:700;color:var(--green);opacity:0.2;line-height:0.6;display:block;margin-bottom:18px}
+blockquote.grey{font-family:'Poppins',sans-serif;font-size:clamp(18px,2vw,24px);font-style:italic;font-weight:400;line-height:1.55;color:var(--ink);margin-bottom:26px}
+.expert-name{font-size:14px;font-weight:600;color:var(--ink);letter-spacing:0.04em;font-family:'Montserrat',sans-serif}
+.expert-role{font-size:12px;color:var(--grey-400);margin-top:4px;font-family:'Montserrat',sans-serif}
+.expert-link{margin-top:26px;display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--green);text-decoration:none;font-weight:600;transition:gap 0.2s;font-family:'Montserrat',sans-serif}
 .expert-link:hover{gap:14px}
 
-/* ── RITUAL SECTION (restructured from V2A original) ── */
-.ritual{padding:100px 68px;background:var(--off-white)}
-.ritual-inner{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:80px;align-items:center
-}
-.ritual-left{}
-.ritual-intro{
-  font-size:15px;color:var(--grey-600);
-  line-height:1.8;max-width:400px;margin-top:16px;margin-bottom:44px
-}
+/* ── RITUAL ── */
+.ritual{padding:100px 68px;background:var(--bg)}
+.ritual-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.ritual-intro{font-size:15px;color:var(--grey-600);line-height:1.8;max-width:400px;margin-top:16px;margin-bottom:44px;font-family:'Montserrat',sans-serif}
 .ritual-steps{display:flex;flex-direction:column}
-.ritual-step{
-  display:flex;gap:24px;
-  padding:22px 0;border-bottom:1px solid var(--border)
-}
+.ritual-step{display:flex;gap:24px;padding:22px 0;border-bottom:1px solid var(--border)}
 .ritual-step:first-child{border-top:1px solid var(--border)}
-.step-time{
-  font-family:'Libre Baskerville',serif;
-  font-size:12px;color:var(--slate);font-weight:400;
-  min-width:80px;padding-top:3px;letter-spacing:0.04em;
-  flex-shrink:0
-}
-.step-body h4{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:4px}
-.step-body p{font-size:13px;color:var(--grey-400);line-height:1.7}
-.ritual-right{
-  background:var(--grey-50);border:1px solid var(--border);
-  aspect-ratio:4/5;display:flex;align-items:center;
-  justify-content:center;position:relative;overflow:hidden
-}
-.ritual-img-ghost{
-  font-family:'Libre Baskerville',serif;
-  font-size:180px;font-weight:700;
-  color:rgba(61,90,128,0.05);line-height:1;user-select:none
-}
-.ritual-tag{
-  position:absolute;top:24px;left:24px;
-  background:var(--slate);color:#fff;
-  font-size:10px;font-weight:500;letter-spacing:0.14em;
-  text-transform:uppercase;padding:6px 14px;border-radius:3px
-}
+.step-time{font-family:'Poppins',sans-serif;font-size:12px;color:var(--green);font-weight:600;min-width:80px;padding-top:3px;letter-spacing:0.04em;flex-shrink:0}
+.step-body h4{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:4px;font-family:'Montserrat',sans-serif}
+.step-body p{font-size:13px;color:var(--grey-400);line-height:1.7;font-family:'Montserrat',sans-serif}
+.ritual-right{background:var(--grey-50);border:1px solid var(--border);aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.ritual-img-ghost{font-family:'Poppins',sans-serif;font-size:180px;font-weight:700;color:rgba(31,112,92,0.05);line-height:1;user-select:none}
+.ritual-tag{position:absolute;top:24px;left:24px;background:var(--green);color:#fff;font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:6px 14px;border-radius:3px;font-family:'Montserrat',sans-serif}
 
 /* ── REVIEWS ── */
 .reviews{padding:100px 68px;background:var(--white)}
-.reviews-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:0;border:1px solid var(--border);margin-top:48px
-}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border);margin-top:48px}
 .rev-card{padding:34px 30px;border-right:1px solid var(--border)}
 .rev-card:last-child{border-right:none}
 .rev-stars{display:flex;gap:3px;margin-bottom:14px}
-.rev-star{
-  width:11px;height:11px;background:var(--slate);
-  clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)
-}
-.rev-text{
-  font-family:'Libre Baskerville',serif;
-  font-size:14px;font-style:italic;
-  color:var(--grey-800);line-height:1.75;margin-bottom:22px
-}
+.rev-star{width:11px;height:11px;background:var(--green);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+.rev-text{font-family:'Montserrat',sans-serif;font-size:14px;font-style:italic;color:var(--grey-800);line-height:1.75;margin-bottom:22px}
 .rev-person{display:flex;align-items:center;gap:12px}
-.rev-avatar{
-  width:38px;height:38px;
-  background:var(--slate-pale);
-  border:1px solid rgba(61,90,128,0.2);
-  border-radius:50%;display:flex;align-items:center;
-  justify-content:center;font-size:12px;font-weight:500;color:var(--slate)
-}
-.rev-name{font-size:13px;font-weight:500;color:var(--ink)}
-.rev-detail{font-size:11px;color:var(--grey-400);margin-top:2px}
-.rev-verified{
-  font-size:10px;color:var(--slate);font-weight:500;
-  margin-top:4px;letter-spacing:0.04em
-}
+.rev-avatar{width:38px;height:38px;background:var(--green-pale);border:1px solid rgba(31,112,92,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:var(--green);font-family:'Montserrat',sans-serif}
+.rev-name{font-size:13px;font-weight:600;color:var(--ink);font-family:'Montserrat',sans-serif}
+.rev-detail{font-size:11px;color:var(--grey-400);margin-top:2px;font-family:'Montserrat',sans-serif}
+.rev-verified{font-size:10px;color:var(--green);font-weight:600;margin-top:4px;letter-spacing:0.04em;font-family:'Montserrat',sans-serif}
 
 /* ── CTA ── */
-.cta{
-  background:var(--grey-800);padding:100px 68px;
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:80px;align-items:center
-}
-.cta-left h2{
-  font-family:'Libre Baskerville',serif;
-  font-size:clamp(34px,4vw,56px);
-  font-weight:400;color:#fff;line-height:1.08;
-  letter-spacing:-0.01em
-}
-.cta-left h2 em{font-style:italic;color:var(--slate-light)}
-.cta-right p{
-  font-size:15px;color:rgba(255,255,255,0.5);
-  line-height:1.8;margin-bottom:32px
-}
+.cta{background:var(--grey-800);padding:100px 68px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.cta-left h2{font-family:'Poppins',sans-serif;font-size:clamp(32px,3.8vw,52px);font-weight:700;color:#fff;line-height:1.08;letter-spacing:-0.01em}
+.cta-left h2 em{font-style:italic;color:var(--green-light);font-weight:600}
+.cta-right p{font-size:15px;color:rgba(255,255,255,0.5);line-height:1.8;margin-bottom:32px;font-family:'Montserrat',sans-serif}
 .cta-checklist{display:flex;flex-direction:column;gap:10px;margin-bottom:36px}
-.cta-check{display:flex;align-items:center;gap:12px;font-size:13px;color:rgba(255,255,255,0.65)}
-.check-dot{
-  width:18px;height:18px;background:rgba(61,90,128,0.4);
-  border-radius:50%;display:flex;align-items:center;
-  justify-content:center;font-size:10px;color:#fff;flex-shrink:0
-}
-.btn-white{
-  background:var(--white);color:var(--slate);
-  padding:15px 40px;font-size:13px;font-weight:500;
-  letter-spacing:0.08em;text-decoration:none;
-  display:inline-block;border-radius:3px;transition:all 0.2s
-}
-.btn-white:hover{background:var(--slate-pale)}
+.cta-check{display:flex;align-items:center;gap:12px;font-size:13px;color:rgba(255,255,255,0.65);font-family:'Montserrat',sans-serif}
+.check-dot{width:18px;height:18px;background:rgba(31,112,92,0.5);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;flex-shrink:0}
+.btn-white{background:var(--white);color:var(--green);padding:15px 40px;font-size:13px;font-weight:600;letter-spacing:0.08em;text-decoration:none;display:inline-block;border-radius:3px;transition:all 0.2s;font-family:'Montserrat',sans-serif}
+.btn-white:hover{background:var(--green-pale)}
 
 /* ── FOOTER ── */
-footer{
-  background:var(--ink);padding:64px 68px;
-  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px
-}
-.f-logo{
-  font-family:'Libre Baskerville',serif;
-  font-size:20px;color:#fff;text-decoration:none;
-  display:block;margin-bottom:14px
-}
-.f-brand p{
-  font-size:13px;color:rgba(255,255,255,0.3);
-  line-height:1.75;max-width:220px
-}
-.f-col h4{
-  font-size:9px;font-weight:600;
-  letter-spacing:0.22em;text-transform:uppercase;
-  color:var(--slate-light);margin-bottom:18px
-}
+footer{background:var(--ink);padding:64px 68px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px}
+.f-logo{font-family:'Poppins',sans-serif;font-size:18px;font-weight:700;color:#fff;text-decoration:none;display:block;margin-bottom:14px;letter-spacing:0.04em;text-transform:uppercase}
+.f-logo span{color:var(--green-light)}
+.f-brand p{font-size:13px;color:rgba(255,255,255,0.3);line-height:1.75;max-width:220px;font-family:'Montserrat',sans-serif}
+.f-col h4{font-size:9px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--green-light);margin-bottom:18px;font-family:'Montserrat',sans-serif}
 .f-col ul{list-style:none}
 .f-col li{margin-bottom:10px}
-.f-col a{
-  font-size:13px;color:rgba(255,255,255,0.35);
-  text-decoration:none;transition:color 0.2s
-}
+.f-col a{font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.2s;font-family:'Montserrat',sans-serif}
 .f-col a:hover{color:#fff}
-.f-bottom{
-  background:var(--ink);
-  border-top:1px solid rgba(255,255,255,0.06);
-  padding:20px 68px;
-  display:flex;justify-content:space-between;align-items:center
-}
-.f-bottom p{font-size:11px;color:rgba(255,255,255,0.22)}
+.f-bottom{background:var(--ink);border-top:1px solid rgba(255,255,255,0.06);padding:20px 68px;display:flex;justify-content:space-between;align-items:center}
+.f-bottom p{font-size:11px;color:rgba(255,255,255,0.22);font-family:'Montserrat',sans-serif}
 .cert-row{display:flex;gap:10px}
-.cert{
-  font-size:9px;letter-spacing:0.12em;text-transform:uppercase;
-  border:1px solid rgba(255,255,255,0.1);
-  padding:4px 10px;color:rgba(255,255,255,0.28)
-}
+.cert{font-size:9px;letter-spacing:0.12em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.1);padding:4px 10px;color:rgba(255,255,255,0.28);font-family:'Montserrat',sans-serif}
 
 /* ── ANIMATIONS ── */
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
@@ -489,12 +202,10 @@ footer{
 </head>
 <body>
 
-<!-- ANNOUNCE -->
 <div class="announce">Free Shipping above ₹999 &nbsp;·&nbsp; COD Available &nbsp;·&nbsp; 30-Day Money-Back Guarantee</div>
 
-<!-- NAV -->
 <nav>
-  <a href="#" class="logo">Winpowr</a>
+  <a href="#" class="logo">WIN<span>POWR</span></a>
   <ul class="nav-links">
     <li><a href="#">Shop</a></li>
     <li><a href="#">Our Science</a></li>
@@ -507,7 +218,6 @@ footer{
   </div>
 </nav>
 
-<!-- HERO: full-width cinematic -->
 <section class="hero">
   <div class="hero-watermark">W</div>
   <div class="hero-inner">
@@ -515,8 +225,8 @@ footer{
     <h1>Health that holds up<br>to the <em>highest standard.</em></h1>
     <p class="hero-desc">Science-formulated, transparently dosed supplements for urban professionals who don't settle — at work or with their wellness.</p>
     <div class="hero-actions">
-      <a href="#" class="btn-slate">Shop the Range</a>
-      <a href="#" class="btn-ghost-grey">Take the 2-min quiz</a>
+      <a href="#" class="btn-green">Shop the Range</a>
+      <a href="#" class="btn-ghost">Take the 2-min quiz</a>
     </div>
     <div class="hero-stats">
       <div class="hero-stat"><strong>12,000+</strong><span>Customers nationally</span></div>
@@ -527,7 +237,6 @@ footer{
   </div>
 </section>
 
-<!-- TRUST BAND -->
 <div class="trust-band">
   <div class="tb-item"><div class="tb-icon">✦</div><div class="tb-text"><strong>FSSAI Certified</strong><span>Regulatory approved</span></div></div>
   <div class="tb-item"><div class="tb-icon">◈</div><div class="tb-text"><strong>GMP Manufactured</strong><span>Quality assured</span></div></div>
@@ -535,42 +244,31 @@ footer{
   <div class="tb-item"><div class="tb-icon">◉</div><div class="tb-text"><strong>30-Day Guarantee</strong><span>No questions asked</span></div></div>
 </div>
 
-<!-- PHILOSOPHY: alternating rows -->
 <section class="philosophy">
   <div class="phil-header">
     <span class="eyebrow">Our Standards</span>
-    <h2 class="h2">Why Winpowr is different<br>from everything <em>else on the shelf.</em></h2>
-    <p>We built Winpowr because most supplements are formulated for margin and shelf space, not for the person reading the label. We changed the brief entirely.</p>
+    <h2 class="h2">Why WINPOWR is different<br>from everything <em>else on the shelf.</em></h2>
+    <p>We built WINPOWR because most supplements are formulated for margin and shelf space, not for the person reading the label. We changed the brief entirely.</p>
   </div>
   <div class="phil-rows">
     <div class="phil-row">
       <div class="phil-num">01</div>
       <div class="phil-title"><h3>Clinical Dosing,<br>Not Label Dosing</h3></div>
-      <div class="phil-body">
-        <p>Every active ingredient is dosed at the level proven effective in peer-reviewed studies — not trace amounts to justify a position on the label. We publish every ingredient and every dose. Nothing hidden in a proprietary blend.</p>
-        <div class="phil-tag">Fully transparent formula</div>
-      </div>
+      <div class="phil-body"><p>Every active ingredient is dosed at the level proven effective in peer-reviewed studies — not trace amounts to justify a position on the label. We publish every ingredient and every dose. Nothing hidden in a proprietary blend.</p><div class="phil-tag">Fully transparent formula</div></div>
     </div>
     <div class="phil-row">
       <div class="phil-num">02</div>
       <div class="phil-title"><h3>Pharmaceutical-Grade<br>Raw Materials</h3></div>
-      <div class="phil-body">
-        <p>We source exclusively from ISO-certified suppliers. Every production batch undergoes independent third-party testing at an accredited NABL laboratory for potency, heavy metals, and microbial load before it ships.</p>
-        <div class="phil-tag">ISO-certified sourcing</div>
-      </div>
+      <div class="phil-body"><p>We source exclusively from ISO-certified suppliers. Every production batch undergoes independent third-party testing at an accredited NABL laboratory for potency, heavy metals, and microbial load before it ships.</p><div class="phil-tag">ISO-certified sourcing</div></div>
     </div>
     <div class="phil-row">
       <div class="phil-num">03</div>
       <div class="phil-title"><h3>Results in 21 Days,<br>Or Your Money Back</h3></div>
-      <div class="phil-body">
-        <p>We're confident enough in our formulas to back every order with a full 30-day money-back guarantee. No gatekeeping, no customer service battles, no fine print conditions. Your results or your money returned in full.</p>
-        <div class="phil-tag">30-day money back</div>
-      </div>
+      <div class="phil-body"><p>We're confident enough in our formulas to back every order with a full 30-day money-back guarantee. No gatekeeping, no customer service battles, no fine print conditions. Your results or your money returned in full.</p><div class="phil-tag">30-day money back</div></div>
     </div>
   </div>
 </section>
 
-<!-- PRODUCTS: asymmetric featured layout -->
 <section class="products">
   <div class="products-header">
     <div>
@@ -580,24 +278,15 @@ footer{
     <a href="#" class="view-link">View all products →</a>
   </div>
   <div class="prod-layout">
-
-    <!-- FEATURED: left, spans 2 rows -->
     <a href="#" class="prod-card featured">
-      <div class="prod-img-full">
-        <div class="prod-ghost">D</div>
-      </div>
+      <div class="prod-img-full"><div class="prod-ghost">D</div></div>
       <div class="prod-body">
         <div class="prod-tag">Blood Sugar Support · Best Seller</div>
         <div class="prod-name">DiaControl — Natural Glucose Management</div>
         <p class="prod-desc">9 clinically-studied botanicals at evidence-backed doses to support healthy blood sugar, sustained energy, and metabolic balance throughout the day.</p>
-        <div class="prod-footer">
-          <div class="prod-price">₹2,499</div>
-          <a href="#" class="prod-cta">Add to Cart</a>
-        </div>
+        <div class="prod-footer"><div class="prod-price">₹2,499</div><a href="#" class="prod-cta">Add to Cart</a></div>
       </div>
     </a>
-
-    <!-- RIGHT STACK: top -->
     <a href="#" class="prod-card">
       <div class="prod-img-sm"><div class="prod-ghost prod-ghost-sm">G</div></div>
       <div class="prod-body">
@@ -607,8 +296,6 @@ footer{
         <div class="prod-footer"><div class="prod-price">₹3,199</div><a href="#" class="prod-cta">Add to Cart</a></div>
       </div>
     </a>
-
-    <!-- RIGHT STACK: bottom -->
     <a href="#" class="prod-card">
       <div class="prod-img-sm"><div class="prod-ghost prod-ghost-sm">B</div></div>
       <div class="prod-body">
@@ -618,63 +305,38 @@ footer{
         <div class="prod-footer"><div class="prod-price">₹2,199</div><a href="#" class="prod-cta">Add to Cart</a></div>
       </div>
     </a>
-
   </div>
 </section>
 
-<!-- EXPERT -->
 <div class="expert">
   <div class="expert-img">
     <div class="expert-img-ghost">W</div>
     <div class="expert-cred-card">
       <div class="expert-cred-name">Dr. Priya Sharma</div>
-      <div class="expert-cred-title">MD Clinical Nutrition · AIIMS New Delhi<br>14 Years Clinical Practice</div>
-      <div class="expert-cred-badges">
-        <span class="cred-badge">AIIMS Alumnus</span>
-        <span class="cred-badge">MD Nutrition</span>
-        <span class="cred-badge">Clinical Advisor</span>
-      </div>
+      <div class="expert-cred-title">MD Clinical Nutrition · AIIMS New Delhi · 14 Years Clinical Practice</div>
+      <div class="expert-cred-badges"><span class="cred-badge">AIIMS Alumnus</span><span class="cred-badge">MD Nutrition</span><span class="cred-badge">Clinical Advisor</span></div>
     </div>
   </div>
   <div class="expert-text">
     <span class="eyebrow">From Our Expert Panel</span>
     <span class="open-quote">"</span>
-    <blockquote class="grey">Most supplements give you 10% of what the label claims. Winpowr's clinical dosing philosophy is the standard the entire industry should be held to.</blockquote>
+    <blockquote class="grey">Most supplements give you 10% of what the label claims. WINPOWR's clinical dosing philosophy is the standard the entire industry should be held to.</blockquote>
     <div class="expert-name">Dr. Priya Sharma</div>
     <div class="expert-role">MD Clinical Nutrition · 14 Years Practice · AIIMS New Delhi</div>
     <a href="#" class="expert-link">Meet the full expert panel →</a>
   </div>
 </div>
 
-<!-- RITUAL: restructured section -->
 <section class="ritual">
   <div class="ritual-inner">
     <div class="ritual-left">
-      <span class="eyebrow">The Winpowr Ritual</span>
+      <span class="eyebrow">The WINPOWR Ritual</span>
       <h2 class="h2">Make it part of<br>your <em>morning.</em></h2>
-      <p class="ritual-intro">Premium wellness isn't a one-time decision. It's a daily habit. Here's how our customers build Winpowr into the rhythm of their day — and why consistency is what drives the results.</p>
+      <p class="ritual-intro">Premium wellness isn't a one-time decision. It's a daily habit. Here's how our customers build WINPOWR into the rhythm of their day — and why consistency is what drives the results.</p>
       <div class="ritual-steps">
-        <div class="ritual-step">
-          <div class="step-time">7:00 AM</div>
-          <div class="step-body">
-            <h4>Morning — with breakfast</h4>
-            <p>DiaControl and Fish Oil with your first meal to maximise absorption and set your metabolic baseline for the day.</p>
-          </div>
-        </div>
-        <div class="ritual-step">
-          <div class="step-time">8:00 AM</div>
-          <div class="step-body">
-            <h4>Post-breakfast — skin & hair</h4>
-            <p>Glutathione and Biotin Complex taken 30 minutes after eating for optimal collagen synthesis throughout the morning.</p>
-          </div>
-        </div>
-        <div class="ritual-step">
-          <div class="step-time">21 Days</div>
-          <div class="step-body">
-            <h4>First visible results</h4>
-            <p>With consistent daily use, customers report the first measurable changes between days 14 and 21. Track yours.</p>
-          </div>
-        </div>
+        <div class="ritual-step"><div class="step-time">7:00 AM</div><div class="step-body"><h4>Morning — with breakfast</h4><p>DiaControl and Fish Oil with your first meal to maximise absorption and set your metabolic baseline for the day.</p></div></div>
+        <div class="ritual-step"><div class="step-time">8:00 AM</div><div class="step-body"><h4>Post-breakfast — skin & hair</h4><p>Glutathione and Biotin Complex taken 30 minutes after eating for optimal collagen synthesis throughout the morning.</p></div></div>
+        <div class="ritual-step"><div class="step-time">21 Days</div><div class="step-body"><h4>First visible results</h4><p>With consistent daily use, customers report the first measurable changes between days 14 and 21. Track yours.</p></div></div>
       </div>
     </div>
     <div class="ritual-right">
@@ -684,34 +346,18 @@ footer{
   </div>
 </section>
 
-<!-- REVIEWS -->
 <section class="reviews">
   <span class="eyebrow">Verified Reviews</span>
   <h2 class="h2">Real people.<br><em>Measured results.</em></h2>
   <div class="reviews-grid">
-    <div class="rev-card">
-      <div class="rev-stars"><div class="rev-star"></div><div class="rev-star"></div><div class="rev-star"></div><div class="rev-star"></div><div class="rev-star"></div></div>
-      <p class="rev-text">"Three months on DiaControl and my fasting glucose is down 18 points. My doctor was genuinely surprised. This is the real deal."</p>
-      <div class="rev-person"><div class="rev-avatar">RM</div><div><div class="rev-name">Rahul M.</div><div class="rev-detail">DiaControl · Delhi</div><div class="rev-verified">✓ Verified Purchase</div></div></div>
-    </div>
-    <div class="rev-card">
-      <div class="rev-stars"><div class="rev-star"></div><div class="rev-star"></div><div class="rev-star"></div><div class="rev-star"></div><div class="rev-star"></div></div>
-      <p class="rev-text">"The Glutathione formula is unlike anything I've tried. Skin brightness was visible in 3 weeks. Worth every rupee at this quality level."</p>
-      <div class="rev-person"><div class="rev-avatar">SK</div><div><div class="rev-name">Sneha K.</div><div class="rev-detail">Glutathione · Mumbai</div><div class="rev-verified">✓ Verified Purchase</div></div></div>
-    </div>
-    <div class="rev-card">
-      <div class="rev-stars"><div class="rev-star"></div><div class="rev-star"></div><div class="rev-star"></div><div class="rev-star"></div><div class="rev-star"></div></div>
-      <p class="rev-text">"Tried 6 Biotin brands. Winpowr is the first where I actually saw real hair thickness change. The 25000mcg dosage is serious."</p>
-      <div class="rev-person"><div class="rev-avatar">AR</div><div><div class="rev-name">Anjali R.</div><div class="rev-detail">Biotin Complex · Bangalore</div><div class="rev-verified">✓ Verified Purchase</div></div></div>
-    </div>
+    <div class="rev-card"><div class="rev-stars"><div class="rev-star"></div><div class="rev-star"></div><div class="rev-star"></div><div class="rev-star"></div><div class="rev-star"></div></div><p class="rev-text">"Three months on DiaControl and my fasting glucose is down 18 points. My doctor was genuinely surprised. This is the real deal."</p><div class="rev-person"><div class="rev-avatar">RM</div><div><div class="rev-name">Rahul M.</div><div class="rev-detail">DiaControl · Delhi</div><div class="rev-verified">✓ Verified Purchase</div></div></div></div>
+    <div class="rev-card"><div class="rev-stars"><div class="rev-star"></div><div class="rev-star"></div><div class="rev-star"></div><div class="rev-star"></div><div class="rev-star"></div></div><p class="rev-text">"The Glutathione formula is unlike anything I've tried. Skin brightness was visible in 3 weeks. Worth every rupee at this quality level."</p><div class="rev-person"><div class="rev-avatar">SK</div><div><div class="rev-name">Sneha K.</div><div class="rev-detail">Glutathione · Mumbai</div><div class="rev-verified">✓ Verified Purchase</div></div></div></div>
+    <div class="rev-card"><div class="rev-stars"><div class="rev-star"></div><div class="rev-star"></div><div class="rev-star"></div><div class="rev-star"></div><div class="rev-star"></div></div><p class="rev-text">"Tried 6 Biotin brands. WINPOWR is the first where I actually saw real hair thickness change. The 25000mcg dosage is serious."</p><div class="rev-person"><div class="rev-avatar">AR</div><div><div class="rev-name">Anjali R.</div><div class="rev-detail">Biotin Complex · Bangalore</div><div class="rev-verified">✓ Verified Purchase</div></div></div></div>
   </div>
 </section>
 
-<!-- CTA -->
 <div class="cta">
-  <div class="cta-left">
-    <h2>Not sure where<br>to <em>start?</em></h2>
-  </div>
+  <div class="cta-left"><h2>Not sure where<br>to <em>start?</em></h2></div>
   <div class="cta-right">
     <p>Take our 2-minute wellness quiz. Answer 8 simple questions and we'll match you with the exact formula your body needs — personalised by our expert panel.</p>
     <div class="cta-checklist">
@@ -723,10 +369,9 @@ footer{
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="f-brand">
-    <a href="#" class="f-logo">Winpowr</a>
+    <a href="#" class="f-logo">WIN<span>POWR</span></a>
     <p>Science-backed supplements for people who take their wellness as seriously as their career.</p>
   </div>
   <div class="f-col"><h4>Products</h4><ul><li><a href="#">DiaControl</a></li><li><a href="#">Glutathione</a></li><li><a href="#">Biotin Complex</a></li><li><a href="#">Fish Oil</a></li></ul></div>
@@ -734,7 +379,7 @@ footer{
   <div class="f-col"><h4>Support</h4><ul><li><a href="#">FAQ</a></li><li><a href="#">Shipping & COD</a></li><li><a href="#">Returns</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
 </footer>
 <div class="f-bottom">
-  <p>© 2026 Winpowr. All rights reserved.</p>
+  <p>© 2026 WINPOWR. All rights reserved.</p>
   <div class="cert-row"><div class="cert">FSSAI</div><div class="cert">GMP</div><div class="cert">ISO 9001</div><div class="cert">NABL Tested</div></div>
 </div>
 
